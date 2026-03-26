@@ -49,4 +49,4 @@ export const mockData = {
 };
 
 export const IMG_CDN_URL =
-  "https://res.cloudinary.com/swiggy/image/upload/w_300,h_200,c_fill/";
+  "https://media-assets.swiggy.com/swiggy/image/upload/";

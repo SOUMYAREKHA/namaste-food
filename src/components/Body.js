@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Header";
 import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
@@ -16,13 +15,13 @@ const Body = () => {
     setResData(
       data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants,
     );
-
-    console.log(json);
   };
+  console.log(resData);
   return (
     <div className="body">
-      <Header />
-      <RestaurantCard resData={resData} />
+      {resData.map((restaurant) => (
+        <RestaurantCard resData={restaurant} key={restaurant.info.id} />
+      ))}
     </div>
   );
 };
